@@ -1,0 +1,84 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #ff5f6d, #ffc371);
+    --glass: rgba(255,255,255,0.25);
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-gradient);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* CARD */
+.reveal-wrapper {
+    text-align: center;
+    padding: 40px;
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    color: var(--white);
+    animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.main-text {
+    font-size: 2.5rem;
+}
+
+.sub-text {
+    margin: 10px 0 25px;
+    font-size: 1.1rem;
+}
+
+/* BUTTONS */
+.btn-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+button {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.yes {
+    background: #ff3366;
+    color: white;
+}
+
+.no {
+    background: #ffffff;
+    color: #ff3366;
+}
+
+/* PARTICLES */
+.particle {
+    position: absolute;
+    bottom: -50px;
+    animation: floatUp var(--duration) linear forwards;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0) scale(0); opacity: 0; }
+    to { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+}
