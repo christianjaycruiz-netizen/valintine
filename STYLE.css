@@ -82,3 +82,14 @@ button {
     from { transform: translateY(0) scale(0); opacity: 0; }
     to { transform: translateY(-110vh) scale(1.2); opacity: 0; }
 }
+
+.hidden {
+    display: none;
+}
+
+video {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
