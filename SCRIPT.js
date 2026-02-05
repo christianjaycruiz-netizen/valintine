@@ -20,6 +20,9 @@ setInterval(createParticle, 200);
 /* BUTTON LOGIC */
 const noBtn = document.getElementById('noBtn');
 const yesBtn = document.getElementById('yesBtn');
+const questionPage = document.getElementById('questionPage');
+const yesPage = document.getElementById('yesPage');
+
 let scale = 1;
 
 noBtn.addEventListener('click', () => {
@@ -29,5 +32,6 @@ noBtn.addEventListener('click', () => {
 });
 
 yesBtn.addEventListener('click', () => {
-    window.location.href = "yes.html";
+    questionPage.classList.add('hidden');
+    yesPage.classList.remove('hidden');
 });
